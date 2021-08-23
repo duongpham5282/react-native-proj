@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="/logo.svg">
+    <link rel="manifest" href="/manifest.json">
+    <title>HutBot Admin</title>
+    <style data-jss="" data-meta="MuiTypography">
+    .MuiTypography-root {
+        margin: 0;
+    }
+    .MuiTypography-h1 {
+        font-size: 3rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 300;
+        line-height: 1.167;
+        letter-spacing: -0.01562em;
+    }
+    .MuiTypography-h3 {
+        font-size: 1.64rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        line-height: 1.167;
+        letter-spacing: 0em;
+    }
+    .MuiTypography-h5 {
+        font-size: 1.285rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        line-height: 1.334;
+        letter-spacing: 0em;
+    }
+    .MuiTypography-h6 {
+        font-size: 1.142rem;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.0075em;
+    }
+    .MuiTypography-colorPrimary {
+        color: #E32A33;
+    }
+    .MuiTypography-colorSecondary {
+        color: #fff;
+    }
+    .MuiTypography-colorTextSecondary {
+        color: #6E6E6E;
+    }
+</style><style data-jss="" data-meta="MuiTouchRipple">
+    .MuiTouchRipple-root {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow: hidden;
+        position: absolute;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+    @-webkit-keyframes MuiTouchRipple-keyframes-enter {
+        0% {
+            opacity: 0.1;
+            transform: scale(0);
+        }
+        100% {
+            opacity: 0.3;
+            transform: scale(1);
+        }
+    }
+    @-webkit-keyframes MuiTouchRipple-keyframes-exit {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.92);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style><style data-jss="" data-meta="MuiButtonBase">
+    .MuiButtonBase-root {
+        color: inherit;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        display: inline-flex;
+        outline: 0;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        user-select: none;
+        border-radius: 0;
+        vertical-align: middle;
+        -moz-appearance: none;
+        justify-content: center;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .MuiButtonBase-root::-moz-focus-inner {
+        border-style: none;
+    }
+</style><style data-jss="" data-meta="MuiButton">
+    .MuiButton-root {
+        color: #4A4A4A;
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 500;
+        line-height: 1.75;
+        border-radius: 4px;
+        letter-spacing: 0.02857em;
+        text-transform: uppercase;
+    }
+    .MuiButton-root:hover {
+        text-decoration: none;
+        background-color: rgba(74, 74, 74, 0.04);
+    }
+    @media (hover: none) {
+        .MuiButton-root:hover {
+            background-color: transparent;
+        }
+    }
+    .MuiButton-label {
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        justify-content: inherit;
+    }
+    .MuiButton-contained {
+        color: rgba(0, 0, 0, 0.87);
+        box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+        background-color: #e0e0e0;
+    }
+    .MuiButton-contained:hover {
+        box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+        background-color: #d5d5d5;
+    }
+
+    .MuiButton-contained:active {
+        box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+    }
+
+    @media (hover: none) {
+        .MuiButton-contained:hover {
+            box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+            background-color: #e0e0e0;
+        }
+    }
+
+    .MuiButton-containedPrimary {
+        color: #fff;
+        background-color: #E32A33;
+    }
+    .MuiButton-containedPrimary:hover {
+        background-color: #aa161e;
+    }
+    @media (hover: none) {
+        .MuiButton-containedPrimary:hover {
+            background-color: #E32A33;
+        }
+    }
+
+
+    .MuiButton-containedSizeLarge {
+        padding: 8px 22px;
+        font-size: 0.9375rem;
+    }
+
+    .MuiButton-iconSizeSmall > *:first-child {
+        font-size: 18px;
+    }
+    .MuiButton-iconSizeMedium > *:first-child {
+        font-size: 20px;
+    }
+    .MuiButton-iconSizeLarge > *:first-child {
+        font-size: 22px;
+    }
+</style>
+    <style data-jss="" data-meta="MuiPaper">
+    .MuiPaper-root {
+        color: #4A4A4A;
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-color: #fff;
+    }
+    .MuiPaper-rounded {
+        border-radius: 4px;
+    }
+    .MuiPaper-elevation1 {
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+    }
+</style><style data-jss="" data-meta="makeStyles">
+    .jss1 {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #E32A33;
+    }
+    .jss2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 96px;
+    }
+    @media (max-width:959.95px) {
+        .jss2 {
+            display: none;
+        }
+    }
+    .jss3 {
+        color: white;
+        font-weight: 600;
+        margin-left: 16px;
+    }
+    .jss4 {
+        width: 70px;
+        margin-right: 16px;
+    }
+    .jss5 {
+        display: flex;
+        max-width: 404px;
+        box-shadow: 0px 3px 18px 0px #4558A3B3, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A;
+        align-items: center;
+        padding-top: 64px;
+        padding-left: 48px;
+        padding-right: 48px;
+        flex-direction: column;
+        padding-bottom: 64px;
+    }
+    .jss6 {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .jss7 {
+        font-size: 148px;
+        font-weight: 600;
+    }
+    .jss8 {
+        color: #B9B9B9;
+        font-weight: 300;
+    }
+    .jss9 {
+        font-size: 22px;
+        box-shadow: 0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A;
+        text-transform: none;
+    }
+</style></head>
+<body>
+<div>
+    <div class="MuiGrid-root jss1 MuiGrid-container">
+        <div class="jss2"><img class="jss4" src="/logo.svg" alt="logo">
+            <h3 class="MuiTypography-root jss3 MuiTypography-h3 MuiTypography-colorSecondary">HutBot Admin</h3></div>
+        <div class="MuiPaper-root jss5 MuiPaper-elevation1 MuiPaper-rounded">
+            <h1 class="MuiTypography-root jss6 jss7 MuiTypography-h1 MuiTypography-colorPrimary">403</h1>
+            <h5 class="MuiTypography-root jss6 MuiTypography-h5 MuiTypography-colorPrimary">Oops! Something went wrong</h5>
+            <h6 class="MuiTypography-root jss6 jss8 MuiTypography-h6 MuiTypography-colorTextSecondary">Access denied</h6>
+            <a class="MuiButtonBase-root MuiButton-root MuiButton-contained jss9 MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge"
+               tabindex="0" role="button" aria-disabled="false" href="/">
+                <span class="MuiButton-label">Back to Home</span>
+                <span class="MuiTouchRipple-root"></span>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

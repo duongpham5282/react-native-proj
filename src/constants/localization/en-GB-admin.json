@@ -1,0 +1,11 @@
+{
+  "admin.login.button": "Log In",
+  "admin.login.error.title": "Sorry, you can’t log in",
+  "admin.login.error.description": "Unexpected Log in Error. Please, try again later.",
+
+  "admin.checklists.statusLabels.inProgress": "In progress",
+  "admin.checklists.statusLabels.overdue": "Late",
+  "admin.checklists.statusLabels.notSubmitted": "Missed",
+  "admin.checklists.statusLabels.completed": "On time",
+  "admin.checklists.statusLabels.notStarted": "Not started"
+}

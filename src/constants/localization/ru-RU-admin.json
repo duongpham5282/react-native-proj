@@ -1,0 +1,10 @@
+{
+  "admin.login.error.description": "[RU]Unexpected Log in Error. Please, try again later.",
+  "admin.filter.dateFrom.placeholder": "[RU]Select date",
+  "admin.page.equipment.table.body.emptyDataSourceMessage": "[RU]No records to display",
+  "admin.filter.area": "[RU]Area",
+  "admin.filter.store.placeholder": "[RU]Select stores",
+  "admin.shifts.day": "[RU]Day",
+  "admin.common.error403.subtitle": "[RU]Access denied",
+  "admin.filter.name": "[RU]Name",
+}
